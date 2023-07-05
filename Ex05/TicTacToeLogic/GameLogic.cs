@@ -215,23 +215,17 @@ namespace Ex05.TicTacToeLogic
         private void makeComputerMove()
         {
             Random random = new Random();
-
-            // Generate random row and column indices
             ushort randomRow = (ushort)random.Next(0, m_Board.Size);
             ushort randomCol = (ushort)random.Next(0, m_Board.Size);
 
-            // Check if the randomly generated cell is available
-            while (m_Board.GetCell(randomRow, randomCol).HasValue)
+            while(m_Board.GetCell(randomRow, randomCol).HasValue)
             {
                 randomRow = (ushort)random.Next(0, m_Board.Size);
                 randomCol = (ushort)random.Next(0, m_Board.Size);
             }
 
-            // Set the randomly generated cell for the computer player
             m_Board.SetCell(randomRow, randomCol, m_Player[1].PlayerNumber);
             m_NumOfAvailableCells--;
-
-            // Trigger the valid move event
             OnValidMove(randomRow, randomCol);
         }
     }
