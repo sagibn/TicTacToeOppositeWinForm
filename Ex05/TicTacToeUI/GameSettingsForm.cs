@@ -9,7 +9,7 @@ using Ex05.TicTacToeLogic;
 
 namespace Ex05.TicTacToeUI
 {
-    class GameSettingsForm : Form
+    public class GameSettingsForm : Form
     {
         private Label m_LabelPlayers;
         private Label m_LabelPlayer1;
@@ -111,8 +111,8 @@ namespace Ex05.TicTacToeUI
             m_NumericUpDownRows.AutoSize = false;
             m_NumericUpDownRows.Location = new Point(m_LabelRows.Right + 10, m_LabelRows.Bottom - 19);
             m_NumericUpDownRows.Visible = true;
-            m_NumericUpDownRows.Minimum = 4;
-            m_NumericUpDownRows.Maximum = 10;
+            m_NumericUpDownRows.Minimum = Board.sr_MinBoardSize;
+            m_NumericUpDownRows.Maximum = Board.sr_MaxBoardSize;
             m_NumericUpDownRows.Width = 40;
             m_NumericUpDownRows.Height = 50;
             m_NumericUpDownRows.ValueChanged += m_NumericUpDownRows_ValueChanged;
@@ -125,8 +125,8 @@ namespace Ex05.TicTacToeUI
             m_NumericUpDownCols.AutoSize = false;
             m_NumericUpDownCols.Location = new Point(m_LabelCols.Right + 10, m_LabelCols.Bottom - 19);
             m_NumericUpDownCols.Visible = true;
-            m_NumericUpDownCols.Minimum = 4;
-            m_NumericUpDownCols.Maximum = 10;
+            m_NumericUpDownCols.Minimum = Board.sr_MinBoardSize;
+            m_NumericUpDownCols.Maximum = Board.sr_MaxBoardSize;
             m_NumericUpDownCols.Width = 40;
             m_NumericUpDownCols.Height = 50;
             m_NumericUpDownCols.ValueChanged += m_NumericUpDownCols_ValueChanged;

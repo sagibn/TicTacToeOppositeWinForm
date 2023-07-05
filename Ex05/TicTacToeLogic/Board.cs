@@ -9,8 +9,8 @@ namespace Ex05.TicTacToeLogic
     {
         private ushort m_Size;
         private ePlayerNumber?[,] m_Cells;
-        private static readonly int sr_MinBoardSize = 4;
-        private static readonly int sr_MaxBoardSize = 10;
+        internal static readonly int sr_MinBoardSize = 4;
+        internal static readonly int sr_MaxBoardSize = 10;
 
         public enum ePlayerNumber
         {
