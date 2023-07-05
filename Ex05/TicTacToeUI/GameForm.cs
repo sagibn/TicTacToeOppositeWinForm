@@ -92,7 +92,7 @@ namespace Ex05.TicTacToeUI
 
         private void restartMatch()
         {
-            m_TicTacToe.restartMatch();
+            m_TicTacToe.RestartMatch();
             m_WhichPlayerTurn = 0;
             m_LabelPlayer1Name.Font = new Font(m_LabelPlayer1Name.Font, FontStyle.Bold);
             m_LabelPlayer1Score.Font = new Font(m_LabelPlayer1Score.Font, FontStyle.Bold);

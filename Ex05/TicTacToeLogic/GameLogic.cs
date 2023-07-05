@@ -204,7 +204,7 @@ namespace Ex05.TicTacToeLogic
             return isTie || winnerIsFound;
         }
 
-        public void restartMatch()
+        public void RestartMatch()
         {
             ushort boardSize = m_Board.Size;
             m_Board = new Board(boardSize);
